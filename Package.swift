@@ -21,7 +21,8 @@ let package = Package(
                 name: "EmptyToSupportDependencies",
                 dependencies: [
                     .product(name: "GRPC", package: "grpc-swift"),
-                    .product(name: "CGRPCZlib", package: "grpc-swift")
+                    .product(name: "CGRPCZlib", package: "grpc-swift"),
+                    .target(name: "UnitTestWithPod"),
                 ]),
         .binaryTarget(
                 name: "UnitTestWithPod",
