@@ -18,9 +18,11 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-              name: "UnitTestWithPodTarget",
-              dependencies: [.target(name: "UnitTestWithPodWrapper",
-                                     condition: .when(platforms: [.iOS]))]
+            name: "UnitTestWithPodTarget",
+            dependencies: [
+                .target(name: "UnitTestWithPodWrapper")
+              ],
+            path: "UnitTestWithPodTarget"
             ),
         .target(
                 name: "UnitTestWithPodWrapper",
@@ -30,7 +32,9 @@ let package = Package(
                     .product(name: "CGRPCZlib", package: "grpc-swift"),
                     .product(name: "KeychainSwift", package: "keychain-swift"),
                     
-                ]),
+                ],
+                path: "UnitTestWithPodWrapper"
+        ),
         .binaryTarget(
                 name: "UnitTestWithPod",
                 url: "https://testbuildartefacts.s3.us-east-2.amazonaws.com/sic-sdk-ios/1.2.3/UnitTestWithPod.xcframework.zip",

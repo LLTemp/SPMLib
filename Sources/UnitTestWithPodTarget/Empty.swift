@@ -1,12 +1,1 @@
-import UnitTestWithPod
-
-public class LIB {
-    
-    public static let shared = LIB()
-    
-    
-    public func methodOne(){
-        
-    }
-    
-}
+// swift package manager demands at least one file in source folder
