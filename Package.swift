@@ -20,7 +20,7 @@ let package = Package(
         .binaryTarget(
                 name: "UnitTestWithPod",
                 url: "https://testbuildartefacts.s3.us-east-2.amazonaws.com/sic-sdk-ios/1.2.3/UnitTestWithPod.xcframework.zip",
-                checksum: "47e5bf85fa18b0072339fd2ffdad1841bbd5a007ab9efee2ed5d10a5c335900e"
+                checksum: "cce6618d8b36bc0a723cd0468ee4155443ced9073f5adb7cf7e0d0ce9dd0444a"
         )
     ]
 )
