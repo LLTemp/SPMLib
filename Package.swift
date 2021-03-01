@@ -12,7 +12,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/grpc/grpc-swift.git", from: "1.0.0"),
+        //.package(url: "https://github.com/grpc/grpc-swift.git", from: "1.0.0"),
         .package(name: "KeychainSwift", url: "https://github.com/evgenyneu/keychain-swift.git", from: "19.0.0")
     ],
     targets: [
@@ -28,7 +28,7 @@ let package = Package(
                 name: "UnitTestWithPodWrapper",
                 dependencies: [
                     .target(name: "UnitTestWithPodSpm"),
-                    .product(name: "CGRPCZlib", package: "grpc-swift"),
+                    //.product(name: "CGRPCZlib", package: "grpc-swift"),
                     .product(name: "KeychainSwift", package: "KeychainSwift"),
                     
                 ]
