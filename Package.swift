@@ -27,17 +27,16 @@ let package = Package(
         .target(
                 name: "UnitTestWithPodWrapper",
                 dependencies: [
-                    .target(name: "UnitTestWithPod"),
-                    .product(name: "GRPC", package: "grpc-swift"),
+                    .target(name: "UnitTestWithPodSpm"),
                     .product(name: "CGRPCZlib", package: "grpc-swift"),
                     .product(name: "KeychainSwift", package: "KeychainSwift"),
                     
                 ]
         ),
         .binaryTarget(
-                name: "UnitTestWithPod",
-                url: "https://testbuildartefacts.s3.us-east-2.amazonaws.com/sic-sdk-ios/1.2.3/UnitTestWithPod.xcframework.zip",
-                checksum: "cce6618d8b36bc0a723cd0468ee4155443ced9073f5adb7cf7e0d0ce9dd0444a"
+                name: "UnitTestWithPodSpm",
+                url: "https://testbuildartefacts.s3.us-east-2.amazonaws.com/sic-sdk-ios/1.2.3/UnitTestWithPodSpm.xcframework.zip",
+                checksum: "ffd21dfb028d027a78842138e86ad851f8f1a73948a905bd6abdf992b977c0be"
         )
     ]
 )
